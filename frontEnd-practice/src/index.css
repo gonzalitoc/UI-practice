@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Monserrat', sans-serif;
+  box-sizing: border-box;
+}
+.page {
+  margin: 0 auto;
+  max-width: 1280px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.page--spacing {
+  padding: 0 48px;
+}
+
+.w-265 {
+  width: 265px;
+}
