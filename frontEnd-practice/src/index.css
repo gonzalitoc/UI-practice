@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 * {
-  font-family: 'Monserrat', sans-serif;
+  font-family: "Monserrat", sans-serif;
   box-sizing: border-box;
 }
 .page {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1900px;
   overflow-x: hidden;
   position: relative;
 }
@@ -19,4 +19,16 @@
 
 .w-265 {
   width: 265px;
+}
+
+@media only screen and (max-width: 960px) {
+  .page--spacing {
+    padding: 0 36px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page--spacing {
+    padding: 0 16px;
+  }
 }

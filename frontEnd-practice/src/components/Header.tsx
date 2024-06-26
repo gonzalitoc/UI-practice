@@ -1,14 +1,19 @@
-// import { useState } from 'react'
+import { useState } from "react";
 
 function Header() {
-  // const [open, setOpen] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
-    <header className="bg-black h-h-88 ">
+    <header className="bg-black h-h-88">
       <section className="flex justify-between items-center h-full page page--spacing">
         <div className="flex items-center">
-          <a className="" title="Go to goabstract.com" href="https://www.goabstract.com">
+          <a
+            className=""
+            title="Go to goabstract.com"
+            href="https://www.goabstract.com"
+          >
             <svg
-              className="w-32"
+              className="w-32 max-xs:w-28"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 200 51"
               preserveAspectRatio="xMinYMid slice"
@@ -52,40 +57,69 @@ function Header() {
                 ></path>
               </g>
             </svg>
-            <img src="/hc/theming_assets/01HZH4D4XDDYSK70D51BKJEBMH" alt="Logo" className="logo h-0 " />
+            <img
+              src="/hc/theming_assets/01HZH4D4XDDYSK70D51BKJEBMH"
+              alt="Logo"
+              className="logo h-0"
+            />
           </a>
           <a
             href="#"
-            className="font-light  text-white pl-3 pt-1 pb-1 text-2xl border-l-2 border-solid border-white block hover:underline ml-4"
+            className="font-light  text-white pl-3 pt-1 pb-1 text-2xl border-l-2 border-solid border-white block hover:underline ml-4 max-xs:text-xl max-xs:pl-1 max-xs:ml-2"
           >
             Help Center
           </a>
         </div>
-        <div className="">
+        <div className="flex items-center lg:hidden ">
           <button className="">
-            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="42" viewBox="0 0 24 24">
+            <svg
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              viewBox="0 0 24 24"
+            >
               <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
             </svg>
           </button>
-          <div className="HAMBURGER-ICON space-y-2">
-            <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-white"></span>
+          <div
+            className="space-y-2 cursor-pointer"
+            onClick={() => setIsNavOpen((prev: boolean) => !prev)}
+          >
+            {isNavOpen ? (
+              <svg
+                className="h-8 w-8 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <>
+                <span className="block h-0.5 w-8 bg-white"></span>
+                <span className="block h-0.5 w-8 bg-white"></span>
+                <span className="block h-0.5 w-8 bg-white"></span>
+              </>
+            )}
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-4">
+        <div className="justify-center items-center gap-4 hidden space-x-8 lg:flex">
           <form className="hidden">
             <input
               name="query"
               id="query"
               placeholder="Search"
-              className="outline-none w-265 font-light  py-2.5 px-5 border-solid border-transparent border rounded-lg  text-xl"
+              className="outline-none w-265 font-light py-2.5 px-5 border-solid border-transparent border rounded-lg text-xl"
             />
           </form>
           <a
             href="#"
-            className="bg-bs-bg  text-white border-solid border-white border rounded-lg font-light text-2xl py-2 px-5"
+            className="bg-bs-bg text-white border-solid border-white border rounded-lg font-light text-2xl py-2 px-5"
           >
             Submit a request
           </a>
@@ -97,8 +131,27 @@ function Header() {
           </a>
         </div>
       </section>
+      {isNavOpen && (
+        <div className="lg:hidden  bg-bs-bg absolute w-full pb-11 pt-11 z-50">
+          <div className="flex flex-col items-center">
+            <a
+              href="#"
+              className=" text-white transition-colors duration-300 block pb-4 hover:text-header-color-text font-light text-2xl border-b border-header-color-text text-center w-96"
+            >
+              Submit a request
+            </a>
+
+            <a
+              href="#"
+              className="text-white transition-colors duration-300 hover:text-header-color-text  pt-4  rounded-lg font-light text-2xl "
+            >
+              Sign in
+            </a>
+          </div>
+        </div>
+      )}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
