@@ -56,8 +56,8 @@ const categories: CategoryListValue = {
 
 function Category() {
   return (
-    <section className="py-40 px-28 ">
-      <div className="flex justify-center max-w-w-1600 my-0 mx-auto">
+    <section className="pt-28 pb-40 px-28 max-lg:px-16 max-lg:pt-16 max-sm:px-18 max-sm:pt-10 max-sm:pb-28 max-xs:px-8 max-xs:pb-20">
+      <div className="flex justify-center max-lg:flex-wrap max-w-w-1600 my-0 mx-auto">
         <div className="flex flex-col pr-9">
           {categories.left.map((category, index) => (
             <Content {...category} key={index} />
