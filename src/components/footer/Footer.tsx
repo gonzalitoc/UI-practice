@@ -1,21 +1,34 @@
-import FooterContent from './FooterContent'
-const linksOne = [{ text: 'Start Trial' }, { text: 'Pricing' }, { text: 'Download' }]
-const linksTwo = [{ text: 'Blog' }, { text: 'Help Center' }, { text: 'Release Notes' }, { text: 'Status' }]
+import FooterContent from "./FooterContent";
+const linksOne = [
+  { text: "Start Trial" },
+  { text: "Pricing" },
+  { text: "Download" },
+];
+const linksTwo = [
+  { text: "Blog" },
+  { text: "Help Center" },
+  { text: "Release Notes" },
+  { text: "Status" },
+];
 const linksTree = [
-  { text: 'Twitter' },
-  { text: 'LinkedIn' },
-  { text: 'Facebook' },
-  { text: 'Facebook' },
-  { text: 'Dribbble' },
-  { text: 'Podcast' },
-]
-const linksFour = [{ text: 'About Us' }, { text: 'Careers' }, { text: 'Legal' }]
+  { text: "Twitter" },
+  { text: "LinkedIn" },
+  { text: "Facebook" },
+  { text: "Facebook" },
+  { text: "Dribbble" },
+  { text: "Podcast" },
+];
+const linksFour = [
+  { text: "About Us" },
+  { text: "Careers" },
+  { text: "Legal" },
+];
 
 function Footer() {
   return (
-    <footer className=" bg-black text-white pb-14 pl-9 pr-9">
-      <section className="h-full items-end page flex page--spacing justify-between ">
-        <div className="flex gap-16 flex-wrap pb-24">
+    <footer className=" bg-black text-white pb-14 ">
+      <section className="h-full items-end page flex page--spacing justify-between max-lg:items-center max-sm:flex-col max-sm:items-end">
+        <div className="flex gap-16 flex-wrap pb-24 max-lg:gap-10  max-sm:gap-5 max-sm:pb-14">
           <FooterContent title="Abstract" links={linksOne} />
           <FooterContent title="Resources" links={linksTwo} />
           <FooterContent title="Community" links={linksTree} />
@@ -30,7 +43,11 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col">
-          <a className="" title="Go to goabstract.com" href="https://www.goabstract.com">
+          <a
+            className=""
+            title="Go to goabstract.com"
+            href="https://www.goabstract.com"
+          >
             <svg
               className="w-32 mb-5"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +60,7 @@ function Footer() {
               </g>
             </svg>
           </a>
-          <p className="text-xl leading-7 font-light">
+          <p className="text-xl leading-7 font-light ">
             © Copyright 2023 <br />
             Abstract Studio Design, Inc.
             <br /> All rights reserved
@@ -51,7 +68,7 @@ function Footer() {
         </div>
       </section>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
