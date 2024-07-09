@@ -1,19 +1,32 @@
-import FooterContent from './FooterContent'
-const linksOne = [{ text: 'Start Trial' }, { text: 'Pricing' }, { text: 'Download' }]
-const linksTwo = [{ text: 'Blog' }, { text: 'Help Center' }, { text: 'Release Notes' }, { text: 'Status' }]
+import FooterContent from "./FooterContent";
+const linksOne = [
+  { text: "Start Trial" },
+  { text: "Pricing" },
+  { text: "Download" },
+];
+const linksTwo = [
+  { text: "Blog" },
+  { text: "Help Center" },
+  { text: "Release Notes" },
+  { text: "Status" },
+];
 const linksTree = [
-  { text: 'Twitter' },
-  { text: 'LinkedIn' },
-  { text: 'Facebook' },
-  { text: 'Facebook' },
-  { text: 'Dribbble' },
-  { text: 'Podcast' },
-]
-const linksFour = [{ text: 'About Us' }, { text: 'Careers' }, { text: 'Legal' }]
+  { text: "Twitter" },
+  { text: "LinkedIn" },
+  { text: "Facebook" },
+  { text: "Facebook" },
+  { text: "Dribbble" },
+  { text: "Podcast" },
+];
+const linksFour = [
+  { text: "About Us" },
+  { text: "Careers" },
+  { text: "Legal" },
+];
 
 function Footer() {
   return (
-    <footer className=" bg-black text-white pb-14 pl-9 pr-9">
+    <footer className=" bg-black text-white pb-20 pl-9 pr-9">
       <section className="h-full items-end page flex page--spacing justify-between ">
         <div className="flex gap-16 flex-wrap pb-24">
           <FooterContent title="Abstract" links={linksOne} />
@@ -30,7 +43,11 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col">
-          <a className="" title="Go to goabstract.com" href="https://www.goabstract.com">
+          <a
+            className=""
+            title="Go to goabstract.com"
+            href="https://www.goabstract.com"
+          >
             <svg
               className="w-32 mb-5"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +68,7 @@ function Footer() {
         </div>
       </section>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

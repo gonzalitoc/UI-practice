@@ -2,6 +2,12 @@ import { useState } from "react";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isSearchHeaderOpen, setSearchHeaderOpen] = useState<boolean>(false);
+
+  const preview: React.CSSProperties = {
+    visibility: isSearchHeaderOpen ? "visible" : "hidden",
+    width: isSearchHeaderOpen ? "auto" : "0",
+  };
 
   return (
     <header className="bg-black h-h-88">
@@ -71,7 +77,7 @@ function Header() {
           </a>
         </div>
         <div className="flex items-center lg:hidden ">
-          <button className="">
+          <button onClick={() => setSearchHeaderOpen(!isSearchHeaderOpen)}>
             <svg
               fill="#fff"
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +115,7 @@ function Header() {
         </div>
 
         <div className="justify-center items-center gap-4 hidden space-x-8 lg:flex">
-          <form className="hidden">
+          <form style={preview}>
             <input
               name="query"
               id="query"
@@ -118,6 +124,7 @@ function Header() {
             />
           </form>
           <a
+            onClick={() => setSearchHeaderOpen(!isSearchHeaderOpen)}
             href="#"
             className="bg-bs-bg text-white border-solid border-white border rounded-lg font-light text-2xl py-2 px-5"
           >
