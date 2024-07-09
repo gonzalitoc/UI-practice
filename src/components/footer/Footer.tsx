@@ -26,7 +26,7 @@ const linksFour = [
 
 function Footer() {
   return (
-    <footer className=" bg-black text-white pb-14 ">
+    <footer className=" bg-black text-white pb-16 ">
       <section className="h-full items-end page flex page--spacing justify-between max-lg:items-center max-sm:flex-col max-sm:items-end">
         <div className="flex gap-16 flex-wrap pb-24 max-lg:gap-10  max-sm:gap-5 max-sm:pb-14">
           <FooterContent title="Abstract" links={linksOne} />

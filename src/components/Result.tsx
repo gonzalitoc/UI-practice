@@ -6,7 +6,7 @@ function Result(props: ResultProps) {
     <section className="h-full page py-24 ">
       <div className="page--spacing my-24">
         <h3 className="text-5xl font-semibold">Search Results:</h3>
-        <p className="text-3xl mt-6">{searchText}</p>
+        <p className="text-3xl mt-7">{searchText}</p>
       </div>
     </section>
   );
