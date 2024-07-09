@@ -26,9 +26,9 @@ const linksFour = [
 
 function Footer() {
   return (
-    <footer className=" bg-black text-white pb-20 pl-9 pr-9">
-      <section className="h-full items-end page flex page--spacing justify-between ">
-        <div className="flex gap-16 flex-wrap pb-24">
+    <footer className=" bg-black text-white pb-14 ">
+      <section className="h-full items-end page flex page--spacing justify-between max-lg:items-center max-sm:flex-col max-sm:items-end">
+        <div className="flex gap-16 flex-wrap pb-24 max-lg:gap-10  max-sm:gap-5 max-sm:pb-14">
           <FooterContent title="Abstract" links={linksOne} />
           <FooterContent title="Resources" links={linksTwo} />
           <FooterContent title="Community" links={linksTree} />
@@ -60,7 +60,7 @@ function Footer() {
               </g>
             </svg>
           </a>
-          <p className="text-xl leading-7 font-light">
+          <p className="text-xl leading-7 font-light ">
             © Copyright 2023 <br />
             Abstract Studio Design, Inc.
             <br /> All rights reserved
