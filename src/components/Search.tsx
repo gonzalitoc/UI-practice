@@ -8,7 +8,7 @@ const Search: React.FC<SearchProps> = (props: SearchProps) => {
       <div className="page page--spacing ">
         <div className="max-w-w-720 w-full text-center  mx-auto my-0">
           <div className=" text-black font-normal text-7xl mb-4 max-xs:text-4xl max-sm:text-5xl max-lg:text-6xl max-xs:mb-2 ">
-            How can we help?
+            Enter what you want to search for?
           </div>
           <form
             className="h-full flex justify-center relative flex-col w-full items-center"

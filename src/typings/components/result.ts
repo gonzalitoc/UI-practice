@@ -2,4 +2,13 @@ type ResultProps = {
   searchText: string;
 };
 
-export type { ResultProps };
+type ResultData = {
+  extract: string;
+  source: string;
+  thumbnail?: {
+    source: string;
+  };
+  title: string;
+};
+
+export type { ResultProps, ResultData };
